@@ -4,19 +4,24 @@ import { lazy } from 'react';
 // These components are loaded dynamically.
 const Home = lazy(() => import('./components/Home/Home'))
 const Blogs = lazy(() => import('./components/Blogs/Blogs'));
+const SignIn = lazy(() => import('./components/SignIn/SignIn'));
 
 const publicRoutes = [
     {
         path: '/',
         component: Home,
         exact: true,
-        name: 'Home'
     },
     {
         path: '/blogs',
         component: Blogs,
         exact: true,
         name: 'Blogs'
+    },
+    {
+        path: '/signin',
+        component: SignIn,
+        exact: true
     }
 ];
 

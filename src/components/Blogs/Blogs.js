@@ -20,7 +20,7 @@ class Blogs extends Component {
     }
 
     getPosts = () => {
-        return fetch('/posts', {
+        return fetch('/api/posts', {
             mode: 'no-cors'
           })
           .then((res) => res.json())

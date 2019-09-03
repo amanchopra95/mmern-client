@@ -1,19 +1,22 @@
-.flex {
+.flex-between {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.navbar {
-    background-color: #fff;
-    box-shadow: 0px 1px 2px 0 rgba(0,0,0,0.4);
-    padding: 2rem;
+.flex {
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
-.nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.navbar {
+    background-color: #dfefed;
+    /* box-shadow: 0px 1px 2px 0 rgba(0,0,0,0.4); */
+}
+
+.gapping {
+    padding: 1.5rem 10rem 5px;
 }
 
 .link {
@@ -30,4 +33,13 @@
 
 .link:hover {
     color: initial;
+}
+
+.sticky-navbar {
+    margin-top: 10px;
+}
+
+.signup-btn {
+    border: 1px solid #eee;
+    padding: 5px;
 }

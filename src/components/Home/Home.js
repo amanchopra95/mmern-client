@@ -1,4 +1,5 @@
 import React from 'react';
+import Blogs from '../Blogs/Blogs'
 
 const Home = props => {
     
@@ -10,6 +11,7 @@ const Home = props => {
     return (
         <div style={styles}>
             <h2>Home</h2>
+            <Blogs />
         </div>
     )
 }
