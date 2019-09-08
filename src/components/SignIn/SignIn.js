@@ -11,7 +11,6 @@ class SignIn extends React.Component {
     }
 
     inputChangeHandler = (e) => {
-        let identifier = e.target.name;
         this.setState({ identifier: e.target.value })
     }
 
