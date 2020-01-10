@@ -16,7 +16,12 @@ class Blogs extends Component {
     }
 
     componentWillUnmount() {
-        
+        this.setState((prevState, props) => {
+            prevState.posts.length = 0;
+            return {
+                posts: [...prevState.posts]
+            }
+        })
     }
 
     getPosts = () => {

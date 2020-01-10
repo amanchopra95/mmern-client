@@ -14,7 +14,7 @@ function authStart() {
     }
 }
 
-function authStart() {
+function authStop() {
     return {
         type: REGISTRATION_STOP
     }
@@ -28,9 +28,10 @@ export const login = (credentials) => {
             data: credentials
         })
         .then((response) => {
+            console.log(response);
             dispatch({
                 type: LOGGED_IN,
-                payload: response.data
+                payload: response
             })
         })
         .catch((error) => {
