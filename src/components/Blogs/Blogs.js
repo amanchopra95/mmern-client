@@ -1,45 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Blog from './Blog/Blog';
 
-import Posts from '../Posts/Posts';
+const Blogs = (props) => {
 
-class Blogs extends Component {
-
-    state = {
-        posts: []
-    }
-
-    componentDidMount() {
-        this.getPosts()
-        .then((data) => {
-            this.setState({ posts: [...data] })
-          })
-    }
-
-    componentWillUnmount() {
-        this.setState((prevState, props) => {
-            prevState.posts.length = 0;
-            return {
-                posts: [...prevState.posts]
+    return (
+        <div>
+            {
+                props.posts.map((post) => {
+                    return (
+                        <Blog
+                        key={post.id}
+                        title={post.title}
+                        description={post.description}
+                        />
+                    );
+                })
             }
-        })
-    }
-
-    getPosts = () => {
-        return fetch('/api/posts', {
-            mode: 'no-cors'
-          })
-          .then((res) => res.json())
-    }
-
-    render () {
-        return (
-            <div>
-                <h1>Blogs</h1>
-                <Posts posts={[...this.state.posts]} />
-            </div>
-        )
-    }
+        </div>
+    );
 }
 
 export default Blogs;
-

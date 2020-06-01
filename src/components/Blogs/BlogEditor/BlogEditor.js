@@ -1,7 +1,7 @@
 import React from 'react';
-import classes from  'PostEdit.module.css';
+import classes from  'BlogEditor.module.css';
 
-class PostEdit extends React.Component {
+class BlogEditor extends React.Component {
     render () {
         return (
             <div>
@@ -11,4 +11,4 @@ class PostEdit extends React.Component {
     }
 }
 
-export default PostEdit;
+export default BlogEditor;

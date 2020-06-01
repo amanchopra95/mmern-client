@@ -5,6 +5,7 @@ import { lazy } from 'react';
 const Home = lazy(() => import('./components/Home/Home'))
 const Blogs = lazy(() => import('./components/Blogs/Blogs'));
 const SignIn = lazy(() => import('./components/SignIn/SignIn'));
+const BlogPage = lazy(() => import('./components/Blogs/BlogPage/BlogPage'));
 
 const publicRoutes = [
     {
@@ -21,6 +22,11 @@ const publicRoutes = [
     {
         path: '/signin',
         component: SignIn,
+        exact: true
+    },
+    {
+        path: '/blogs/:url',
+        component: BlogPage,
         exact: true
     }
 ];
